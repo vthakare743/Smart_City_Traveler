@@ -1,0 +1,221 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="Admin_AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+<script type="text/javascript">
+    function DisableBack() {
+        window.history.forward();
+    }
+    DisableBack();
+
+    window.onload = DisableBack;
+
+    window.onpageshow = function (evt) {
+        if (evt.persisted) DisableBack();
+    }
+    window.onunload = function () { void (0); }
+
+    </script>
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Travel</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+<link rel="stylesheet" type="text/css" href="../css/hover.css" />
+<link rel="stylesheet" type="text/css" href="../css/side-menu.css" />
+<script type="text/javascript" src="../jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../jquery.dropotron-1.0.js"></script>
+<script type="text/javascript" src="../jquery.slidertron-1.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#menu > ul').dropotron({
+            mode: 'fade',
+            globalOffsetY: 11,
+            offsetY: -15
+        });
+        //        $('#slider').slidertron({
+        //            viewerSelector: '.viewer',
+        //            indicatorSelector: '.indicator span',
+        //            reelSelector: '.reel',
+        //            slidesSelector: '.slide',
+        //            speed: 'slow',
+        //            advanceDelay: 4000
+        //        });
+    });
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#">Smart City Traveller</a></h1>
+		</div>
+		<div id="slogan">
+		<h2>Your travel is Ready !</h2>
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li>
+
+			<a href="Default.aspx">Home</a>
+			
+			</li>
+			<li><a href="#">About Us</a></li>
+		
+			
+			
+		</ul>
+		<br class="clearfix" />
+	</div>
+	
+	<div id="page">
+   
+	    <div id="mid">
+        
+        
+            
+           
+        
+        
+            
+            <table style="width:100%;">
+                <tr>
+                    <td width="300px" class="left-sidebar">
+                       <div class="leftpane">
+                       
+                       
+                           <asp:Image ID="Image1" runat="server" Width="150px" BorderColor="#FF9900" 
+                               BorderStyle="Solid" BorderWidth="1px" />
+                           <br />
+                           <asp:Label ID="lbluser" runat="server" ForeColor="#FF3300" Font-Bold="True"></asp:Label>
+                           <br />
+                           <%--<asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" 
+                               DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Small" 
+                               ForeColor="#284E98" StaticSubMenuIndent="10px" Width="150px">
+                               <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                               <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                               <DynamicMenuStyle BackColor="#B5C7DE" />
+                               <DynamicSelectedStyle BackColor="#507CD1" />
+                               <Items>
+                                   <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Admin/Default.aspx"></asp:MenuItem>
+                                   <asp:MenuItem Text="Packages" Value="New Item" 
+                                       NavigateUrl="~/Admin/Package.aspx"></asp:MenuItem>
+                                   <asp:MenuItem NavigateUrl="~/Admin/ShowPackages.aspx" Text="Show Packages" 
+                                       Value="Show Packages"></asp:MenuItem>
+                                   <asp:MenuItem Text="Feedback" Value="Feedback" 
+                                       NavigateUrl="~/Admin/ShowFeedback.aspx"></asp:MenuItem>
+                                   <asp:MenuItem Text="Change Password" Value="New Item" 
+                                       NavigateUrl="~/Admin/ChangePwd.aspx"></asp:MenuItem>
+                                   <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/Admin/Logout.aspx"></asp:MenuItem>
+                               </Items>
+                               <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                               <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                               <StaticSelectedStyle BackColor="#507CD1" />
+                           </asp:Menu>--%>
+
+                                        <ul class="ca-menu">
+                    <li>
+                        <a href="Default.aspx">
+                            
+                            <div class="ca-content">
+                                <h2 class="ca-main">Home</h2>
+                                
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Package.aspx">
+                            
+                            <div class="ca-content">
+                                <h2 class="ca-main">Packages</h2>
+                                
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ShowPackages.aspx">
+                           
+                            <div class="ca-content">
+                                <h2 class="ca-main">Show Packages</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ShowFeedback.aspx">
+                           
+                            <div class="ca-content">
+                                <h2 class="ca-main">Feedback</h2>
+                          
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ChangePwd.aspx">
+                         
+                            <div class="ca-content">
+                                <h2 class="ca-main">Change Password</h2>
+                              
+                            </div>
+                        </a>
+                    </li>
+
+                     <li>
+                        <a href="Logout.aspx">
+                         
+                            <div class="ca-content">
+                                <h2 class="ca-main">Logout</h2>
+                              
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                       
+                       <asp:SqlDataSource ID="SqlDataGetData" runat="server" 
+                               ConnectionString="<%$ ConnectionStrings:TRAVEL_RECConnectionString %>" 
+                               SelectCommand="SELECT [name], [photo],[id] FROM [AdminReg] WHERE ([username] = @username)">
+                               <SelectParameters>
+                                   <asp:SessionParameter Name="username" SessionField="userid" Type="String" />
+                               </SelectParameters>
+                           </asp:SqlDataSource>
+                       </div>
+
+                       </td>
+                    <td valign="top">
+                         <div class="rightpane">
+                       
+                       
+                             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                             </asp:ContentPlaceHolder>
+                       
+                       
+                       </div>
+                        </td>
+                </tr>
+            </table>
+
+        
+        
+            
+           
+        
+        
+            
+            </div>
+    </div>
+	<div id="page-bottom">
+		<br class="clearfix" />
+	</div>
+</div>
+<div id="footer">
+	Copyright (c) All rights reserved.
+</div>
+    </form>
+</body>
+</html>
